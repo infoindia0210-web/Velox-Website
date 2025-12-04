@@ -1,1 +1,275 @@
-# Velox-Website
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOX Engine Oils & Lubricants - Unleash Peak Performance</title>
+    <style>
+        /* Basic Reset and Variables */
+        :root {
+            --velox-red: #D50000; /* VELOX Brand Red */
+            --dark-bg: #1a1a1a;
+            --light-text: #ffffff;
+            --main-font: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--main-font);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--velox-red);
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--velox-red);
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('[Placeholder: Main Image URL - जैसे, बाइक राइडर वाली फोटो]') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--light-text);
+            position: relative;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        #hero h1, #hero p {
+            z-index: 2;
+            margin: 10px 0;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            color: var(--velox-red);
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+        }
+
+        /* Sections Styling */
+        section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: var(--dark-bg);
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--velox-red);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Products Grid */
+        #products .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .product-card h3 {
+            color: var(--velox-red);
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+
+        .product-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-card ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .product-card ul li::before {
+            content: '★'; /* Star icon */
+            color: var(--velox-red);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--velox-red);
+            color: var(--light-text);
+        }
+
+        #contact a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: #aaa;
+            padding: 20px 5%;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        /* Utility */
+        .cta-button {
+            background-color: var(--velox-red);
+            color: var(--light-text);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff3333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VELOX</div>
+        <nav>
+            <a href="#hero">होम</a>
+            <a href="#products">उत्पाद</a>
+            <a href="#about">हमारे बारे में</a>
+            <a href="#contact">संपर्क</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>UNLEASH PEAK PERFORMANCE.</h1>
+            <p>Smooth Ride. Precision Shifts. Experience the Ultimate Drive.</p>
+            <a href="#products" class="cta-button">उत्पाद देखें</a>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">VELOX: Performance That Moves You</h2>
+            <p>
+                हम VELOX में उच्चतम गुणवत्ता वाले इंजन ऑयल और लुब्रिकेंट्स (Engine Oils & Lubricants) बनाने के लिए प्रतिबद्ध हैं। हमारे उत्पाद आपके इंजन को **अधिकतम इंजन लाइफ (Maximum engine life)** और **चरम गर्मी से सुरक्षा (Extreme Heat Protection)** देने के लिए इंजीनियर किए गए हैं।
+            </p>
+            <p>
+                भारत में निर्मित (Made in India), हम हर सफर को एक बेहतरीन अनुभव बनाने में विश्वास रखते हैं।
+            </p>
+        </section>
+
+        <section id="products">
+            <h2 class="section-title">हमारे उत्पाद श्रेणी</h2>
+            <div class="grid-container">
+                
+                <div class="product-card">
+                    <h3>🏍️ VELOX बाइक ऑयल</h3>
+                    <p><strong>इंजीनियर्ड फॉर द एक्सट्रीम (Engineered for the Extreme)</strong></p>
+                    <ul>
+                        <li>स्मूथ राइड (Smooth Ride)</li>
+                        <li>प्रिसिजन शिफ्ट्स (Precision Shifts)</li>
+                        <li>अत्यधिक गर्मी से सुरक्षा (Extreme Heat Protection)</li>
+                        <li>पीक परफॉर्मेंस को अनलॉक करें</li>
+                    </ul>
+                    <p class="text-center"><em>जैसे: SAE 20W-40, 20W-50</em></p>
+                </div>
+
+                <div class="product-card">
+                    <h3>🚗 VELOX कार ऑयल</h3>
+                    <p><strong>इंजीनियर्ड फॉर द सिटी (Engineered for the City)</strong></p>
+                    <ul>
+                        <li>अनलीश अर्बन पावर (Unleash Urban Power)</li>
+                        <li>एडवांस प्रोटेक्शन (Advance Protection)</li>
+                        <li>बेहतर माइलेज और दक्षता</li>
+                        <li>लंबी इंजन लाइफ</li>
+                    </ul>
+                    <p class="text-center"><em>जैसे: Synthetic, Semi-Synthetic Grades</em></p>
+                </div>
+            </div>
+            <a href="https://www.indianvelox.com" target="_blank" class="cta-button">हमारी पूरी रेंज देखें</a>
+        </section>
+        
+        <section id="benefits" style="background-color: #eee;">
+            <h2 class="section-title">प्रमुख विशेषताएं</h2>
+            <p>हर बूँद में **अद्वितीय प्रदर्शन (Uncompromised Performance)**।</p>
+            <div class="grid-container">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title" style="color: var(--light-text); border-bottom-color: var(--light-text);">हमसे संपर्क करें</h2>
+            <p>
+                आपकी हर यात्रा के लिए VELOX।<br><br>
+                <strong>मुख्य कार्यालय:</strong> भोपाल, M.P. 462026<br>
+                <strong>वेबसाइट:</strong> <a href="https://www.indianvelox.com" target="_blank">www.indianvelox.com</a><br><br>
+                आज ही **अल्टीमेट ड्राइव (Ultimate Drive)** का अनुभव करें!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 VELOX Engine Oils & Lubricants. All Rights Reserved.
+    </footer>
+
+</body>
+</html># Velox-Website
