@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDIAN VELOX | Premium Lubricants & Engine Oils</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
 
-        /* Navigation */
         header {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 20px 8%;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 15px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -20,18 +19,16 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #ffcc00;
+            border-bottom: 2px solid #ffcc00;
         }
-        .logo { font-size: 24px; font-weight: 800; color: #ffcc00; letter-spacing: 1px; }
-        nav a { color: #fff; text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 14px; transition: 0.3s; text-transform: uppercase; }
+        .logo { font-size: 26px; font-weight: 800; color: #ffcc00; letter-spacing: 1px; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; font-size: 14px; transition: 0.3s; text-transform: uppercase; }
         nav a:hover { color: #ffcc00; }
 
-        /* Hero Section Fix */
         #home {
             height: 100vh;
-            /* यहाँ हमने एक बेहतर और साफ़ दिखने वाली इमेज लगाई है */
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -41,44 +38,30 @@
             text-align: center;
             padding: 0 10%;
         }
-        }
-        #home h1 { font-size: 4rem; color: #ffcc00; text-transform: uppercase; line-height: 1; margin-bottom: 20px; }
-        #home p { font-size: 1.2rem; color: #ddd; max-width: 700px; margin-bottom: 30px; }
-        .btn { background: #ffcc00; color: #000; padding: 15px 35px; text-decoration: none; font-weight: 700; border-radius: 5px; transition: 0.3s; }
-        .btn:hover { background: #fff; transform: scale(1.05); }
+        #home h1 { font-size: 4.5rem; color: #ffcc00; text-transform: uppercase; margin-bottom: 15px; }
+        #home p { font-size: 1.4rem; color: #fff; max-width: 800px; margin-bottom: 30px; }
 
-        /* Section Universal Styles */
+        .btn-group { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .btn { background: #ffcc00; color: #000; padding: 15px 35px; text-decoration: none; font-weight: 700; border-radius: 50px; transition: 0.3s; }
+        .btn-whatsapp { background: #25D366; color: #fff; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4); }
+
         section { padding: 100px 10%; text-align: center; }
-        .section-title { font-size: 2.5rem; color: #ffcc00; margin-bottom: 50px; text-transform: uppercase; }
+        .section-title { font-size: 3rem; color: #ffcc00; margin-bottom: 40px; text-transform: uppercase; font-weight: 800; }
 
-        /* About Us */
-        #about { background: #111; }
-        #about p { font-size: 1.1rem; line-height: 1.8; color: #ccc; max-width: 900px; margin: 0 auto; }
+        #about { background: #0a0a0a; line-height: 1.8; }
+        #about p { font-size: 1.15rem; color: #ccc; max-width: 900px; margin: 0 auto; }
 
-        /* Products Grid */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
-        .product-card { background: #1a1a1a; padding: 25px; border-radius: 15px; border: 1px solid #333; transition: 0.4s; }
-        .product-card:hover { border-color: #ffcc00; transform: translateY(-10px); }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .product-card { background: #111; padding: 20px; border-radius: 20px; border: 1px solid #222; transition: 0.4s; }
+        .product-card img { width: 100%; height: 300px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; }
         .product-card h3 { color: #ffcc00; margin-bottom: 10px; }
-        .product-card p { font-size: 0.9rem; color: #aaa; }
 
-        /* Contact Form */
-        #contact { background: #111; }
-        .contact-box { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 10px; text-align: left; }
-        .contact-box label { color: #333; font-weight: 600; display: block; margin-bottom: 5px; }
-        .contact-box input, .contact-box textarea { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
-        .send-btn { background: #000; color: #ffcc00; width: 100%; padding: 15px; border: none; font-weight: 700; cursor: pointer; font-size: 1rem; }
+        .contact-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; background: #fff; padding: 40px; border-radius: 20px; color: #000; text-align: left; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; }
+        .submit-btn { background: #000; color: #ffcc00; width: 100%; padding: 15px; border: none; font-weight: 700; border-radius: 8px; cursor: pointer; }
 
-        /* Footer */
-        footer { background: #000; padding: 50px 10%; border-top: 2px solid #ffcc00; text-align: center; color: #666; }
-        
-        @media (max-width: 768px) {
-            #home h1 { font-size: 2.5rem; }
-            header { flex-direction: column; padding: 15px; }
-            nav { margin-top: 15px; }
-            nav a { margin: 0 10px; font-size: 12px; }
-        }
+        footer { padding: 40px; background: #000; text-align: center; color: #555; border-top: 1px solid #222; }
     </style>
 </head>
 <body>
@@ -87,66 +70,62 @@
         <div class="logo">INDIAN VELOX</div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#about">About Us</a>
+            <a href="#about">About</a>
             <a href="#products">Products</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <section id="home">
-        <h1>Powering Your Journey</h1>
-        <p>INDIAN VELOX उच्च-प्रदर्शन वाले लुब्रिकेंट्स प्रदान करता है जो इंजन की उम्र बढ़ाते हैं और उसे देते हैं बेजोड़ शक्ति।</p>
-        <a href="#products" class="btn">हमारे उत्पाद देखें</a>
+        <h1>UNLEASH THE POWER</h1>
+        <p>INDIAN VELOX प्रीमियम लुब्रिकेंट्स के साथ अपने इंजन को दें नई जान।</p>
+        <div class="btn-group">
+            <a href="#products" class="btn">View Products</a>
+            <a href="https://wa.me/919179830597?text=Hi, I want to inquire about Indian Velox products." class="btn btn-whatsapp" target="_blank">WhatsApp Order</a>
+        </div>
     </section>
 
     <section id="about">
-        <h2 class="section-title">हमारे बारे में</h2>
-        <p><strong>INDIAN VELOX</strong> भारत की उभरती हुई लुब्रिकेंट कंपनी है। हम आधुनिक तकनीकों का उपयोग करके ऐसे इंजन ऑयल तैयार करते हैं जो घर्षण (Friction) को न्यूनतम करते हैं। हमारा लक्ष्य हर भारतीय वाहन को सुरक्षित और शक्तिशाली बनाना है। चाहे वह आपकी बाइक हो या भारी ट्रक, हमारा तेल हर मशीन की ज़रूरत को समझता है।</p>
+        <h2 class="section-title">Who We Are</h2>
+        <p><strong>INDIAN VELOX</strong> भारत का उभरता हुआ प्रीमियम लुब्रिकेंट ब्रांड है। हमारी हाई-टेक "Anti-Friction" तकनीक इंजन को घर्षण से बचाती है और बेहतर परफॉरमेंस सुनिश्चित करती है।</p>
     </section>
 
     <section id="products">
-        <h2 class="section-title">हमारे प्रोडक्ट्स</h2>
+        <h2 class="section-title">Best Sellers</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&q=80" alt="4T Engine Oil">
+                <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&q=80" alt="Bike Oil">
                 <h3>Velox 4T Gold</h3>
-                <p>बाइक्स और स्कूटर्स के लिए प्रीमियम सिंथेटिक ऑयल। बेहतर पिकअप और माइलेज के लिए।</p>
+                <p>बाइक्स के लिए विशेष सिंथेटिक ऑयल।</p>
             </div>
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1597871158434-73894a86e589?auto=format&fit=crop&q=80" alt="Car Engine Oil">
-                <h3>Velox Ultra Synth</h3>
-                <p>कारों के लिए विशेष सुरक्षा फॉर्मूला। हाई-स्पीड ड्राइविंग में भी इंजन को रखे ठंडा।</p>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1619641782822-23361a4cdf48?auto=format&fit=crop&q=80" alt="Industrial Oil">
-                <h3>Heavy Duty Diesel Oil</h3>
-                <p>ट्रकों और भारी मशीनों के लिए। लंबे समय तक चलने वाला सबसे भरोसेमंद ऑयल।</p>
+                <img src="https://images.unsplash.com/photo-1619641782822-23361a4cdf48?auto=format&fit=crop&q=80" alt="Car Oil">
+                <h3>Velox Synth-X</h3>
+                <p>कारों के लिए हाई-स्पीड सुरक्षा ऑयल।</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2 class="section-title">हमसे जुड़ें</h2>
-        <div class="contact-box">
-            <form name="velox-final-form" method="POST" data-netlify="true">
-                <label>आपका नाम</label>
-                <input type="text" name="name" placeholder="पूरा नाम लिखें" required>
-                
-                <label>मोबाइल नंबर</label>
-                <input type="tel" name="phone" placeholder="+91-0000000000" required>
-                
-                <label>संदेश (Message)</label>
-                <textarea name="message" rows="4" placeholder="ऑर्डर या डिस्ट्रीब्यूटरशिप के बारे में लिखें" required></textarea>
-                
-                <button type="submit" class="send-btn">सबमिट करें</button>
-            </form>
+        <div class="contact-container">
+            <div>
+                <h3>Contact Us</h3>
+                <p>📍 Bhopal, Madhya Pradesh</p>
+                <p>📞 +91 91798 30597</p>
+                <p>✉️ info@indianvelox.com</p>
+            </div>
+            <div class="contact-form">
+                <form name="final-velox" method="POST" data-netlify="true">
+                    <input type="text" name="name" placeholder="आपका नाम" required>
+                    <input type="tel" name="phone" placeholder="मोबाइल नंबर" required>
+                    <textarea name="message" rows="4" placeholder="अपनी ज़रूरत बताएं..." required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p><strong>Address:</strong> Bhopal, Madhya Pradesh, India - 462026</p>
-        <p>Email: info@indianvelox.com | Mob: +91 00000 00000</p>
-        <br>
         <p>&copy; 2025 INDIAN VELOX. All Rights Reserved.</p>
     </footer>
 
