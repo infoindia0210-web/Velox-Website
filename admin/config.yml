@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: APKA_GITHUB_USERNAME/APKA_REPO_NAME # Example: Rahul/indian-velox
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "products"
+    create: true
+    fields:
+      - {label: "Product Name", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Product Image", name: "image", widget: "image"}
