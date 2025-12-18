@@ -3,75 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDIAN VELOX - Premium Engine Oils</title>
+    <title>INDIAN VELOX - प्रीमियम इंजन ऑयल और लुब्रिकेंट्स</title>
     <style>
-        /* मुख्य डिज़ाइन और कलर्स */
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        header { background-color: #000; color: #ffcc00; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ffcc00; }
-        .logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
-        
-        /* Hero Section */
-        #hero { background: #1a1a1a; color: white; padding: 100px 20px; text-align: center; }
-        #hero h1 { font-size: 3rem; color: #ffcc00; margin-bottom: 10px; }
-        
-        /* Form Styling - इसे सफेद बैकग्राउंड पर रखा है ताकि दिखे */
-        .contact-container { max-width: 600px; margin: 50px auto; background: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; border-top: 5px solid #ffcc00; }
-        .section-title { color: #000; font-size: 2rem; margin-bottom: 20px; font-weight: bold; }
-        
-        .form-group { text-align: left; margin-bottom: 15px; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #444; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
-        
-        .submit-btn { background-color: #ffcc00; color: #000; padding: 15px; border: none; border-radius: 8px; font-weight: bold; width: 100%; cursor: pointer; font-size: 1.2rem; transition: 0.3s; margin-top: 10px; }
-        .submit-btn:hover { background-color: #e6b800; transform: translateY(-2px); }
+        /* CSS Reset & General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #111; color: #fff; line-height: 1.6; }
 
-        footer { background: #000; color: #fff; text-align: center; padding: 30px; margin-top: 50px; font-size: 0.9rem; border-top: 2px solid #ffcc00; }
+        /* Header & Navigation */
+        header {
+            background-color: #000;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ffcc00;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; color: #ffcc00; letter-spacing: 2px; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: #ffcc00; }
+
+        /* Hero Section */
+        #hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552650272-b8a34e21bc4b?auto=format&fit=crop&q=80'); /* बैकग्राउंड इमेज */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        #hero h1 { font-size: 3.5rem; color: #ffcc00; text-transform: uppercase; margin-bottom: 10px; }
+        #hero p { font-size: 1.2rem; max-width: 800px; color: #ddd; }
+
+        /* Section Styling */
+        section { padding: 80px 10%; text-align: center; }
+        .section-title { font-size: 2.5rem; color: #ffcc00; margin-bottom: 40px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; display: block; width: 60%; height: 4px; background: #ffcc00; margin: 10px auto; }
+
+        /* Features/About Section */
+        .features { background-color: #1a1a1a; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature-card { padding: 30px; background: #222; border-radius: 10px; border: 1px solid #333; transition: 0.3s; }
+        .feature-card:hover { border-color: #ffcc00; transform: translateY(-5px); }
+        .feature-card h3 { color: #ffcc00; margin-bottom: 15px; }
+
+        /* Contact Form Section */
+        #contact { background-color: #111; }
+        .contact-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            color: #000;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(255, 204, 0, 0.2);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #333; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .submit-btn {
+            background-color: #000;
+            color: #ffcc00;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { background-color: #333; color: #fff; }
+
+        /* Footer */
+        footer { background: #000; padding: 40px 10%; text-align: center; border-top: 2px solid #ffcc00; color: #888; }
+        .footer-info { margin-bottom: 20px; }
+        .footer-info p { margin: 5px 0; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 2.5rem; }
+            header { flex-direction: column; gap: 15px; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">INDIAN VELOX</div>
+        <nav>
+            <a href="#hero">होम</a>
+            <a href="#features">विशेषताएं</a>
+            <a href="#contact">संपर्क</a>
+        </nav>
     </header>
 
     <section id="hero">
         <h1>INDIAN VELOX</h1>
-        <p>Performance That Moves You | अनुभव करें असली रफ़्तार</p>
+        <p>उच्च प्रदर्शन और बेजोड़ सुरक्षा। INDIAN VELOX इंजन ऑयल के साथ अपने वाहन को दें एक नई रफ़्तार।</p>
+    </section>
+
+    <section id="features">
+        <h2 class="section-title">प्रमुख विशेषताएं</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>अधिक माइलेज</h3>
+                <p>हमारा उन्नत फॉर्मूला घर्षण को कम करता है, जिससे आपको मिलता है बेहतर ईंधन माइलेज।</p>
+            </div>
+            <div class="feature-card">
+                <h3>इंजन सुरक्षा</h3>
+                <p>अत्यधिक तापमान में भी आपके इंजन के पुर्जों को रखे सुरक्षित और साफ।</p>
+            </div>
+            <div class="feature-card">
+                <h3>स्मूथ राइड</h3>
+                <p>बेहतर गियर शिफ्टिंग और शोर रहित ड्राइविंग का शानदार अनुभव।</p>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
+        <h2 class="section-title">हमसे संपर्क करें</h2>
         <div class="contact-container">
-            <h2 class="section-title">हमसे संपर्क करें</h2>
-            <p>ऑर्डर या डिस्ट्रीब्यूटरशिप के लिए नीचे दिया गया फॉर्म भरें।</p>
+            <p style="text-align: center; margin-bottom: 25px; font-weight: bold;">डिस्ट्रीब्यूटरशिप या ऑर्डर के लिए फॉर्म भरें</p>
             
-            <form name="contact-indian-velox" method="POST" data-netlify="true">
+            <form name="indian-velox-contact" method="POST" data-netlify="true">
                 <div class="form-group">
                     <label>आपका नाम</label>
-                    <input type="text" name="name" placeholder="पूरा नाम लिखें" required>
+                    <input type="text" name="name" placeholder="अपना नाम लिखें" required>
                 </div>
-
                 <div class="form-group">
                     <label>मोबाइल नंबर</label>
                     <input type="tel" name="phone" placeholder="+91-0000000000" required>
                 </div>
-
                 <div class="form-group">
                     <label>ईमेल</label>
-                    <input type="email" name="email" placeholder="example@gmail.com">
+                    <input type="email" name="email" placeholder="email@example.com">
                 </div>
-
                 <div class="form-group">
-                    <label>मैसेज (Message)</label>
+                    <label>संदेश (Message)</label>
                     <textarea name="message" rows="4" placeholder="अपनी ज़रूरत बताएं..." required></textarea>
                 </div>
-
                 <button type="submit" class="submit-btn">मैसेज भेजें</button>
             </form>
         </div>
     </section>
 
-    <footer style="color: #888;">
-        <p>मुख्य कार्यालय: भोपाल, म.प्र. 462026</p>
+    <footer>
+        <div class="footer-info">
+            <p><strong>मुख्य कार्यालय:</strong> भोपाल, म.प्र. 462026</p>
+            <p><strong>वेबसाइट:</strong> www.indianvelox.com</p>
+        </div>
         <p>&copy; 2025 INDIAN VELOX Engine Oils & Lubricants. All Rights Reserved.</p>
     </footer>
 
