@@ -3,67 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Velox | Master The Machine</title>
+    <title>Indian Velox | Master The Machine - Premium Lubricants Bhopal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --red: #ff0000; --gold: #ffcc00; --dark-bg: #050505; --card-bg: #111; }
+        :root { --red: #ff0000; --gold: #ffcc00; --dark-bg: #050505; --card-bg: #151515; --text-light: #f0f0f0; --text-muted: #bbb; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: var(--dark-bg); color: #fff; overflow-x: hidden; }
+        body { background-color: var(--dark-bg); color: var(--text-light); overflow-x: hidden; }
 
         /* Navbar */
-        nav { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border-bottom: 1px solid #222; }
-        .logo { font-size: 24px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+        nav { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid #333; }
+        .logo { font-size: 26px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; color: #fff; }
         .logo span { color: var(--red); }
+        .nav-info { color: var(--gold); font-weight: 600; font-size: 0.95rem; }
 
         /* Hero Section */
         #home { 
             height: 100vh; 
-            background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://raw.githubusercontent.com/ai-images/engine-oil/main/hero.jpg'); 
+            background: linear-gradient(to right, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/ai-images/engine-oil/main/master_machine_hero.jpg'); /* Image 5 - Bike and Car */
             background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center; padding-left: 8%;
+            display: flex; flex-direction: column; justify-content: center; padding-left: 8%; animation: fadeIn 1.5s ease-out;
         }
-        .hero-content h1 { font-size: 4.5rem; line-height: 1; text-transform: uppercase; font-weight: 900; }
-        .hero-content h1 span { color: var(--red); display: block; }
-        .hero-content p { font-size: 1.2rem; color: #ccc; margin: 20px 0; letter-spacing: 1px; max-width: 600px; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* WhatsApp Button Floating */
-        .wa-float { position: fixed; bottom: 40px; right: 40px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; transition: 0.3s; }
-        .wa-float:hover { transform: scale(1.1); background: #1eb954; }
+        .hero-content h1 { font-size: 5rem; line-height: 1; text-transform: uppercase; font-weight: 900; color: #fff; text-shadow: 0 0 15px rgba(255,0,0,0.5); }
+        .hero-content h1 span { color: var(--red); display: block; margin-top: 10px; }
+        .hero-content p { font-size: 1.3rem; color: var(--text-muted); margin: 25px 0; letter-spacing: 0.5px; max-width: 650px; }
 
-        /* About Section - Using your Piston image info */
-        #about { padding: 100px 8%; display: flex; align-items: center; gap: 50px; background: #0a0a0a; }
-        .about-text h2 { color: var(--gold); font-size: 2.5rem; margin-bottom: 20px; text-transform: uppercase; }
-        .about-text p { color: #bbb; font-size: 1.1rem; margin-bottom: 20px; }
-
-        /* Product Gallery Section */
-        #products { padding: 80px 8%; }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: 3rem; text-transform: uppercase; }
+        /* General Section Styles */
+        section { padding: 100px 8%; }
+        .section-title { text-align: center; margin-bottom: 70px; }
+        .section-title h2 { font-size: 3.5rem; text-transform: uppercase; color: var(--text-light); }
         .section-title h2 span { color: var(--red); }
+        .section-title p { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 15px auto 0; }
+
+        /* About Section (Piston Image 4) */
+        #about { background-color: var(--card-bg); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px; }
+        .about-image { flex: 1; min-width: 300px; max-width: 500px; animation: slideInLeft 1s ease-out; }
+        .about-image img { width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid var(--red); }
+        .about-content { flex: 2; min-width: 300px; max-width: 600px; animation: slideInRight 1s ease-out; }
+        .about-content h3 { color: var(--gold); font-size: 2.5rem; margin-bottom: 20px; text-transform: uppercase; }
+        .about-content p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 15px; line-height: 1.8; }
         
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .product-card { background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid #222; transition: 0.5s; position: relative; }
-        .product-card:hover { transform: translateY(-15px); border-color: var(--red); }
-        .product-card img { width: 100%; height: 400px; object-fit: contain; padding: 20px; }
-        .product-info { padding: 25px; background: linear-gradient(to top, #000, transparent); }
-        .product-info h3 { color: var(--gold); font-size: 1.5rem; margin-bottom: 10px; }
-        
-        /* Footer/Address */
-        footer { padding: 60px 8%; background: #000; border-top: 2px solid var(--red); text-align: center; }
-        .footer-info { margin-bottom: 30px; display: flex; flex-direction: column; gap: 10px; }
-        .footer-info p { font-size: 1.2rem; color: #ddd; }
-        .footer-info i { color: var(--red); margin-right: 10px; }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+
+        /* Products Grid (Images 7 & 8) */
+        #products { background-color: var(--dark-bg); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .product-card { background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid #222; transition: all 0.4s ease-in-out; position: relative; }
+        .product-card:hover { transform: translateY(-15px) scale(1.02); border-color: var(--red); box-shadow: 0 15px 40px rgba(255,0,0,0.2); }
+        .product-card img { width: 100%; height: 450px; object-fit: contain; padding: 20px; }
+        .product-info { padding: 25px; text-align: center; }
+        .product-info h3 { color: var(--gold); font-size: 1.8rem; margin-bottom: 10px; }
+        .product-info p { color: var(--text-muted); font-size: 1rem; }
+
+        /* Call To Action / Contact Section */
+        #contact { background-color: var(--card-bg); text-align: center; padding: 80px 8%; border-top: 1px solid #333; }
+        #contact h2 { font-size: 2.8rem; color: var(--gold); margin-bottom: 30px; }
+        #contact p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
+
+        /* Floating WhatsApp Button */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); z-index: 1000; transition: transform 0.3s ease-in-out; }
+        .wa-float:hover { transform: scale(1.15); background: #1eb954; }
 
         /* Buttons */
-        .btn { padding: 15px 40px; background: var(--red); color: #fff; text-decoration: none; font-weight: bold; text-transform: uppercase; border-radius: 5px; display: inline-block; transition: 0.3s; }
-        .btn:hover { background: #fff; color: #000; }
+        .btn { padding: 18px 45px; background: var(--red); color: #fff; text-decoration: none; font-weight: bold; text-transform: uppercase; border-radius: 8px; display: inline-block; transition: all 0.3s ease-in-out; font-size: 1.1rem; border: none; cursor: pointer; }
+        .btn:hover { background: #fff; color: var(--dark-bg); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(255,0,0,0.3); }
+
+        /* Footer */
+        footer { padding: 50px 8%; background: #000; border-top: 2px solid var(--red); text-align: center; color: #666; font-size: 0.9rem; }
+        footer p { margin-bottom: 10px; }
+        footer a { color: var(--red); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo">INDIAN <span>VELOX</span></div>
-        <div style="font-weight: bold; color: var(--gold); letter-spacing: 1px;">BHOPAL, M.P.</div>
+        <div class="nav-info">📍 BHOPAL, M.P. 462026</div>
     </nav>
 
     <a href="https://wa.me/919179830597" class="wa-float" target="_blank">
@@ -72,49 +90,54 @@
 
     <section id="home">
         <div class="hero-content">
-            <h1>UNLEASH <span>ULTIMATE POWER</span></h1>
-            <p>Experience the future of automotive lubricants. Engineered for extreme heat protection and maximum engine life.</p>
+            <h1>VELOX: MASTER <span>THE MACHINE</span></h1>
+            <p>Experience the future of automotive lubricants. Engineered for extreme heat protection and maximum engine life. Unleash peak performance.</p>
             <a href="https://wa.me/919179830597" class="btn">Order Now</a>
         </div>
     </section>
 
     <section id="about">
-        <div class="about-text">
-            <h2>Experience The Ultimate Drive</h2>
-            <p>Indian Velox provides high-performance lubricants that offer smooth rides and precision shifts even in extreme conditions.</p>
-            <p>Our formula is BS6 ready, ensuring your engine stays clean and efficient.</p>
+        <div class="about-image">
+            <img src="https://raw.githubusercontent.com/ai-images/engine-oil/main/piston_heat_protection.jpg" alt="Piston Heat Protection"> </div>
+        <div class="about-content">
+            <h3>MAXIMUM ENGINE LIFE & HEAT PROTECTION</h3>
+            <p>Indian Velox is committed to providing high-performance lubricants that offer smooth rides and precision shifts even in the most extreme conditions. Our advanced formula reduces friction, improves fuel efficiency, and shields your engine against wear and high temperatures, ensuring a longer, healthier life for your vehicle.</p>
+            <p>Our products are BS6 ready, keeping your engine clean and efficient, reflecting our dedication to quality and innovation.</p>
+            <a href="https://wa.me/919179830597" class="btn">Learn More</a>
         </div>
     </section>
 
     <section id="products">
         <div class="section-title">
             <h2>OUR <span>PREMIUM RANGE</span></h2>
+            <p>Explore our wide selection of high-quality engine oils and lubricants designed for every type of vehicle.</p>
         </div>
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://raw.githubusercontent.com/ai-images/engine-oil/main/4t_black.jpg" alt="Velox 4T Oil">
-                <div class="product-info">
+                <img src="https://raw.githubusercontent.com/ai-images/engine-oil/main/4t_black_bottle.jpg" alt="Indian Velox 4T High Performance"> <div class="product-info">
                     <h3>4T HIGH PERFORMANCE</h3>
-                    <p>Premium Mineral Oil | 20W-40</p>
+                    <p>BS6 Ready | 20W-40 Premium Mineral Engine Oil</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://raw.githubusercontent.com/ai-images/engine-oil/main/all_bottles.jpg" alt="Velox Full Range">
-                <div class="product-info">
-                    <h3>ELITE LUBRICANTS</h3>
-                    <p>Complete engine protection range.</p>
+                <img src="https://raw.githubusercontent.com/ai-images/engine-oil/main/all_bottles_colorful.jpg" alt="Indian Velox Complete Range"> <div class="product-info">
+                    <h3>COMPLETE LUBRICANT RANGE</h3>
+                    <p>Advanced formulas for cars, bikes, and industrial applications.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="contact">
+        <h2>GET IN TOUCH</h2>
+        <p>Connect with us for orders, inquiries, or expert advice on our premium lubricants.</p>
+        <a href="https://wa.me/919179830597" class="btn" style="background-color: #25D366;">WhatsApp Us: +91 9179830597</a>
+    </section>
+
     <footer>
-        <div class="footer-info">
-            <p><i class="fas fa-location-dot"></i> Bhopal, M.P 462026</p>
-            <p><i class="fas fa-phone"></i> +91 9179830597</p>
-            <p><i class="fas fa-globe"></i> www.indianvelox.com</p>
-        </div>
-        <p style="color: #444;">© 2025 Indian Velox Lubricants | Made in India</p>
+        <p>📍 Bhopal, M.P. 462026</p>
+        <p>🌐 <a href="http://www.indianvelox.com" target="_blank">www.indianvelox.com</a></p>
+        <p>© 2025 Indian Velox Lubricants. All Rights Reserved. Made with <i class="fas fa-heart" style="color: var(--red);"></i> in India.</p>
     </footer>
 
 </body>
