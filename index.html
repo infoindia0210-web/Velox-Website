@@ -9,7 +9,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial Black', sans-serif; }
         body { background: var(--dark); color: #fff; text-align: center; }
 
-        /* Background Fix - Using %20 for spaces in filenames */
         #hero { 
             height: 100vh; 
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('034bfd42-f2fd-4ad5-be21-1de5e255dea9.jfif'); 
@@ -17,13 +16,12 @@
             display: flex; flex-direction: column; justify-content: center; align-items: center;
         }
 
-        .product-section { padding: 80px 10%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: #111; padding: 20px; border: 1px solid #333; border-radius: 15px; }
-        .card img { width: 100%; height: 400px; object-fit: contain; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 50px 10%; }
+        .card { background: #111; padding: 15px; border: 1px solid #333; border-radius: 10px; }
+        .card img { width: 100%; height: 350px; object-fit: contain; }
         
-        .btn { background: #25D366; color: white; padding: 18px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.4rem; display: inline-block; margin-top: 25px; }
-        h1 { font-size: 4.5rem; text-transform: uppercase; }
+        .btn { background: #25D366; color: white; padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 20px; }
+        h1 { font-size: 3.5rem; text-transform: uppercase; }
         h1 span { color: var(--red); }
     </style>
 </head>
@@ -31,31 +29,18 @@
 
     <section id="hero">
         <h1>INDIAN <span>VELOX</span></h1>
-        <p style="font-size: 1.8rem; color: var(--gold);">PREMIUM ENGINE OILS & LUBRICANTS</p>
+        <p style="color: var(--gold); font-size: 1.5rem;">PREMIUM LUBRICANTS | BHOPAL</p>
         <a href="https://wa.me/919179830597" class="btn">ORDER ON WHATSAPP</a>
     </section>
 
-    <div class="product-section">
-        <h2 style="font-size: 3rem; color: var(--gold);">OUR PREMIUM RANGE</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="WhatsApp%20Image%202025-12-25%20at%201.54.02%20PM.jpeg" alt="4T Oil">
-                <h3 style="margin-top:15px;">4T HIGH PERFORMANCE</h3>
-            </div>
-            <div class="card">
-                <img src="WhatsApp%20Image%202025-11-25%20at%201.46.09%20PM.jpeg" alt="Red Bottle">
-                <h3 style="margin-top:15px;">VELOX SAE 20W-40</h3>
-            </div>
-            <div class="card">
-                <img src="WhatsApp%20Image%202025-12-25%20at%201.54.01%20PM%20(2).jpg" alt="Range">
-                <h3 style="margin-top:15px;">COMPLETE RANGE</h3>
-            </div>
-        </div>
+    <div class="grid">
+        <div class="card"><img src="product1.jpeg"><h3>4T HIGH PERFORMANCE</h3></div>
+        <div class="card"><img src="product2.jpeg"><h3>SAE 20W-40</h3></div>
+        <div class="card"><img src="product3.jpg"><h3>ADVANCED RANGE</h3></div>
     </div>
 
-    <footer style="padding: 50px; border-top: 2px solid var(--red);">
-        <p>📍 BHOPAL, M.P. 462026</p>
-        <p>www.indianvelox.com | +91 9179830597</p>
+    <footer style="padding: 30px; border-top: 1px solid var(--red);">
+        <p>📍 BHOPAL, M.P. 462026 | +91 9179830597</p>
     </footer>
 
 </body>
