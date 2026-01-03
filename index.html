@@ -7,57 +7,66 @@
     <style>
         :root { --red: #ff0000; --gold: #ffcc00; --dark: #000; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial Black', sans-serif; }
-        body { background: var(--dark); color: #fff; }
+        body { background: var(--dark); color: #fff; overflow-x: hidden; }
 
-        /* Hero Section - Using Your Engine Glow Image */
+        /* Hero Section Fix */
         #hero { 
             height: 100vh; 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('034bfd42-f2fd-4ad5-be21-1de5e255dea9.jfif'); 
-            background-size: cover; background-position: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('034bfd42-f2fd-4ad5-be21-1de5e255dea9.jfif'); 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
         }
 
-        .container { padding: 80px 10%; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #111; padding: 20px; border: 2px solid #222; text-align: center; border-radius: 15px; }
-        .card img { width: 100%; height: 400px; object-fit: contain; }
+        .container { padding: 60px 5%; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: #111; padding: 15px; border: 1px solid #333; text-align: center; border-radius: 10px; }
+        .card img { width: 100%; height: 350px; object-fit: contain; }
         
-        .whatsapp-btn { background: #25D366; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.5rem; display: inline-block; margin-top: 30px; }
+        .whatsapp-btn { background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.2rem; display: inline-block; margin-top: 20px; }
         
-        h1 { font-size: 5rem; text-transform: uppercase; }
+        h1 { font-size: 4rem; text-transform: uppercase; line-height: 1; }
         h1 span { color: var(--red); }
-        h2 { color: var(--gold); font-size: 3rem; margin-bottom: 40px; text-align: center; }
+        h2 { color: var(--gold); font-size: 2.5rem; margin-bottom: 30px; text-align: center; text-transform: uppercase; }
+        
+        .nav-top { width: 100%; padding: 20px 5%; position: absolute; top: 0; display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem; }
     </style>
 </head>
 <body>
 
+    <div class="nav-top">
+        <div>INDIAN <span style="color:var(--red)">VELOX</span></div>
+        <div style="color:var(--gold)">📍 BHOPAL, M.P. 462026</div>
+    </div>
+
     <section id="hero">
-        <h1>UNLEASH <span>ULTIMATE POWER</span></h1>
-        <p style="font-size: 1.5rem;">PREMIUM LUBRICANTS | BHOPAL, M.P. 462026</p>
+        <h1>UNLEASH <span>PEAK POWER</span></h1>
+        <p style="font-size: 1.3rem; margin-top: 15px; letter-spacing: 2px;">PREMIUM ENGINE OILS & LUBRICANTS</p>
         <a href="https://wa.me/919179830597" class="whatsapp-btn">ORDER ON WHATSAPP</a>
     </section>
 
     <div class="container">
-        <h2>OUR PREMIUM RANGE</h2>
+        <h2>Our Premium Products</h2>
         <div class="product-grid">
             <div class="card">
                 <img src="WhatsApp Image 2025-12-25 at 1.54.02 PM.jpeg" alt="4T High Performance">
-                <h3>4T HIGH PERFORMANCE</h3>
+                <h3 style="margin-top:10px">4T HIGH PERFORMANCE</h3>
             </div>
             <div class="card">
-                <img src="WhatsApp Image 2025-11-25 at 1.46.09 PM.jpeg" alt="Velox SAE 20W-40">
-                <h3>SAE 20W-40</h3>
+                <img src="WhatsApp Image 2025-11-25 at 1.46.09 PM.jpeg" alt="Velox Oil">
+                <h3 style="margin-top:10px">VELOX SAE 20W-40</h3>
             </div>
             <div class="card">
                 <img src="WhatsApp Image 2025-12-25 at 1.54.01 PM (2).jpg" alt="Full Range">
-                <h3>COMPLETE RANGE</h3>
+                <h3 style="margin-top:10px">COMPLETE RANGE</h3>
             </div>
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 50px; border-top: 2px solid var(--red);">
-        <p>📍 BHOPAL, M.P. 462026</p>
-        <p>Website: www.indianvelox.com</p>
+    <footer style="text-align: center; padding: 40px; background: #000; border-top: 1px solid var(--red);">
+        <p style="color:var(--gold)">📞 +91 91798 30597 | 🌐 www.indianvelox.com</p>
+        <p style="margin-top:10px; font-size: 0.8rem; color: #555;">© 2025 Indian Velox. All Rights Reserved.</p>
     </footer>
 
 </body>
